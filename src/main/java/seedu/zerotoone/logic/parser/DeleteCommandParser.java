@@ -1,10 +1,10 @@
-package seedu.address.logic.parser;
+package seedu.zerotoone.logic.parser;
 
-import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.zerotoone.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
-import seedu.address.commons.core.index.Index;
-import seedu.address.logic.commands.DeleteCommand;
-import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.zerotoone.commons.core.index.Index;
+import seedu.zerotoone.logic.commands.DeleteCommand;
+import seedu.zerotoone.logic.parser.exceptions.ParseException;
 
 /**
  * Parses input arguments and creates a new DeleteCommand object

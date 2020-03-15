@@ -1,4 +1,4 @@
-package seedu.address.ui;
+package seedu.zerotoone.ui;
 
 import static java.util.Objects.requireNonNull;
 

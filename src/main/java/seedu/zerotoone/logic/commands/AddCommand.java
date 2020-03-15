@@ -1,15 +1,15 @@
-package seedu.address.logic.commands;
+package seedu.zerotoone.logic.commands;
 
 import static java.util.Objects.requireNonNull;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_ADDRESS;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_EMAIL;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_NAME;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_PHONE;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_TAG;
 
-import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.Model;
-import seedu.address.model.person.Person;
+import seedu.zerotoone.logic.commands.exceptions.CommandException;
+import seedu.zerotoone.model.Model;
+import seedu.zerotoone.model.person.Person;
 
 /**
  * Adds a person to the address book.

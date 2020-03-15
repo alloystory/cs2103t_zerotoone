@@ -1,4 +1,4 @@
-package seedu.address.storage;
+package seedu.zerotoone.storage;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,13 +9,13 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import seedu.address.commons.exceptions.IllegalValueException;
-import seedu.address.model.person.Address;
-import seedu.address.model.person.Email;
-import seedu.address.model.person.Name;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.Phone;
-import seedu.address.model.tag.Tag;
+import seedu.zerotoone.commons.exceptions.IllegalValueException;
+import seedu.zerotoone.model.person.Address;
+import seedu.zerotoone.model.person.Email;
+import seedu.zerotoone.model.person.Name;
+import seedu.zerotoone.model.person.Person;
+import seedu.zerotoone.model.person.Phone;
+import seedu.zerotoone.model.tag.Tag;
 
 /**
  * Jackson-friendly version of {@link Person}.

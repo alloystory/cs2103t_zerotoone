@@ -1,8 +1,8 @@
-package seedu.address.model;
+package seedu.zerotoone.model;
 
 import java.nio.file.Path;
 
-import seedu.address.commons.core.GuiSettings;
+import seedu.zerotoone.commons.core.GuiSettings;
 
 /**
  * Unmodifiable view of user prefs.

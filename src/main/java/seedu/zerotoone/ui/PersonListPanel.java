@@ -1,4 +1,4 @@
-package seedu.address.ui;
+package seedu.zerotoone.ui;
 
 import java.util.logging.Logger;
 
@@ -7,8 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Region;
-import seedu.address.commons.core.LogsCenter;
-import seedu.address.model.person.Person;
+import seedu.zerotoone.commons.core.LogsCenter;
+import seedu.zerotoone.model.person.Person;
 
 /**
  * Panel containing the list of persons.

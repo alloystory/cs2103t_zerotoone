@@ -1,6 +1,6 @@
-package seedu.address.logic.commands;
+package seedu.zerotoone.logic.commands;
 
-import seedu.address.model.Model;
+import seedu.zerotoone.model.Model;
 
 /**
  * Terminates the program.

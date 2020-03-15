@@ -1,4 +1,4 @@
-package seedu.address;
+package seedu.zerotoone;
 
 import javafx.application.Application;
 

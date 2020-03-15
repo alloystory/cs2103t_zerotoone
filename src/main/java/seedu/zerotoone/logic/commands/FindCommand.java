@@ -1,10 +1,10 @@
-package seedu.address.logic.commands;
+package seedu.zerotoone.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
-import seedu.address.commons.core.Messages;
-import seedu.address.model.Model;
-import seedu.address.model.person.NameContainsKeywordsPredicate;
+import seedu.zerotoone.commons.core.Messages;
+import seedu.zerotoone.model.Model;
+import seedu.zerotoone.model.person.NameContainsKeywordsPredicate;
 
 /**
  * Finds and lists all persons in address book whose name contains any of the argument keywords.

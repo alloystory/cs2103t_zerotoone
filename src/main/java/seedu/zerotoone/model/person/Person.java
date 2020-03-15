@@ -1,13 +1,13 @@
-package seedu.address.model.person;
+package seedu.zerotoone.model.person;
 
-import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
+import static seedu.zerotoone.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import seedu.address.model.tag.Tag;
+import seedu.zerotoone.model.tag.Tag;
 
 /**
  * Represents a Person in the address book.

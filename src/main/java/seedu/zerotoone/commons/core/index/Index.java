@@ -1,4 +1,4 @@
-package seedu.address.commons.core.index;
+package seedu.zerotoone.commons.core.index;
 
 /**
  * Represents a zero-based or one-based index.

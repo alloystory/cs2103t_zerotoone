@@ -1,12 +1,12 @@
-package seedu.address.model;
+package seedu.zerotoone.model;
 
 import static java.util.Objects.requireNonNull;
 
 import java.util.List;
 
 import javafx.collections.ObservableList;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.UniquePersonList;
+import seedu.zerotoone.model.person.Person;
+import seedu.zerotoone.model.person.UniquePersonList;
 
 /**
  * Wraps all data at the address-book level

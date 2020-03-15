@@ -1,15 +1,15 @@
-package seedu.address.testutil;
+package seedu.zerotoone.testutil;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import seedu.address.model.person.Address;
-import seedu.address.model.person.Email;
-import seedu.address.model.person.Name;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.Phone;
-import seedu.address.model.tag.Tag;
-import seedu.address.model.util.SampleDataUtil;
+import seedu.zerotoone.model.person.Address;
+import seedu.zerotoone.model.person.Email;
+import seedu.zerotoone.model.person.Name;
+import seedu.zerotoone.model.person.Person;
+import seedu.zerotoone.model.person.Phone;
+import seedu.zerotoone.model.tag.Tag;
+import seedu.zerotoone.model.util.SampleDataUtil;
 
 /**
  * A utility class to help with building Person objects.

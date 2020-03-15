@@ -1,17 +1,17 @@
-package seedu.address.testutil;
+package seedu.zerotoone.testutil;
 
-import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_ADDRESS;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_EMAIL;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_NAME;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_PHONE;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_TAG;
 
 import java.util.Set;
 
-import seedu.address.logic.commands.AddCommand;
-import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;
-import seedu.address.model.person.Person;
-import seedu.address.model.tag.Tag;
+import seedu.zerotoone.logic.commands.AddCommand;
+import seedu.zerotoone.logic.commands.EditCommand.EditPersonDescriptor;
+import seedu.zerotoone.model.person.Person;
+import seedu.zerotoone.model.tag.Tag;
 
 /**
  * A utility class for Person.

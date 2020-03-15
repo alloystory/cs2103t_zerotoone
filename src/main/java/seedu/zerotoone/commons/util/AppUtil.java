@@ -1,9 +1,9 @@
-package seedu.address.commons.util;
+package seedu.zerotoone.commons.util;
 
 import static java.util.Objects.requireNonNull;
 
 import javafx.scene.image.Image;
-import seedu.address.MainApp;
+import seedu.zerotoone.MainApp;
 
 /**
  * A container for App specific utility functions

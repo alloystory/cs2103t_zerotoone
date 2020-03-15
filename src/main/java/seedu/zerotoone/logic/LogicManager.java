@@ -1,21 +1,21 @@
-package seedu.address.logic;
+package seedu.zerotoone.logic;
 
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.logging.Logger;
 
 import javafx.collections.ObservableList;
-import seedu.address.commons.core.GuiSettings;
-import seedu.address.commons.core.LogsCenter;
-import seedu.address.logic.commands.Command;
-import seedu.address.logic.commands.CommandResult;
-import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.logic.parser.AddressBookParser;
-import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.Model;
-import seedu.address.model.ReadOnlyAddressBook;
-import seedu.address.model.person.Person;
-import seedu.address.storage.Storage;
+import seedu.zerotoone.commons.core.GuiSettings;
+import seedu.zerotoone.commons.core.LogsCenter;
+import seedu.zerotoone.logic.commands.Command;
+import seedu.zerotoone.logic.commands.CommandResult;
+import seedu.zerotoone.logic.commands.exceptions.CommandException;
+import seedu.zerotoone.logic.parser.AddressBookParser;
+import seedu.zerotoone.logic.parser.exceptions.ParseException;
+import seedu.zerotoone.model.Model;
+import seedu.zerotoone.model.ReadOnlyAddressBook;
+import seedu.zerotoone.model.person.Person;
+import seedu.zerotoone.storage.Storage;
 
 /**
  * The main LogicManager of the app.

@@ -1,4 +1,4 @@
-package seedu.address.model;
+package seedu.zerotoone.model;
 
 import static java.util.Objects.requireNonNull;
 
@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Objects;
 
-import seedu.address.commons.core.GuiSettings;
+import seedu.zerotoone.commons.core.GuiSettings;
 
 /**
  * Represents User's preferences.

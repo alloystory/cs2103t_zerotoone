@@ -1,9 +1,9 @@
-package seedu.address.logic.commands;
+package seedu.zerotoone.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
-import seedu.address.model.AddressBook;
-import seedu.address.model.Model;
+import seedu.zerotoone.model.AddressBook;
+import seedu.zerotoone.model.Model;
 
 /**
  * Clears the address book.

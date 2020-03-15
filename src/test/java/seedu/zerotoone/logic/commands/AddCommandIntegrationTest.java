@@ -1,17 +1,17 @@
-package seedu.address.logic.commands;
+package seedu.zerotoone.logic.commands;
 
-import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
-import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
-import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.assertCommandFailure;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.assertCommandSuccess;
+import static seedu.zerotoone.testutil.TypicalPersons.getTypicalAddressBook;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import seedu.address.model.Model;
-import seedu.address.model.ModelManager;
-import seedu.address.model.UserPrefs;
-import seedu.address.model.person.Person;
-import seedu.address.testutil.PersonBuilder;
+import seedu.zerotoone.model.Model;
+import seedu.zerotoone.model.ModelManager;
+import seedu.zerotoone.model.UserPrefs;
+import seedu.zerotoone.model.person.Person;
+import seedu.zerotoone.testutil.PersonBuilder;
 
 /**
  * Contains integration tests (interaction with the Model) for {@code AddCommand}.

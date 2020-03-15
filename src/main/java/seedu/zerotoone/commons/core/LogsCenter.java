@@ -1,4 +1,4 @@
-package seedu.address.commons.core;
+package seedu.zerotoone.commons.core;
 
 import java.io.IOException;
 import java.util.Arrays;

@@ -1,25 +1,25 @@
-package seedu.address.logic.commands;
+package seedu.zerotoone.logic.commands;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
-import static seedu.address.testutil.Assert.assertThrows;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_ADDRESS;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_EMAIL;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_NAME;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_PHONE;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_TAG;
+import static seedu.zerotoone.testutil.Assert.assertThrows;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import seedu.address.commons.core.index.Index;
-import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.AddressBook;
-import seedu.address.model.Model;
-import seedu.address.model.person.NameContainsKeywordsPredicate;
-import seedu.address.model.person.Person;
-import seedu.address.testutil.EditPersonDescriptorBuilder;
+import seedu.zerotoone.commons.core.index.Index;
+import seedu.zerotoone.logic.commands.exceptions.CommandException;
+import seedu.zerotoone.model.AddressBook;
+import seedu.zerotoone.model.Model;
+import seedu.zerotoone.model.person.NameContainsKeywordsPredicate;
+import seedu.zerotoone.model.person.Person;
+import seedu.zerotoone.testutil.EditPersonDescriptorBuilder;
 
 /**
  * Contains helper methods for testing commands.

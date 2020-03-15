@@ -1,4 +1,4 @@
-package seedu.address;
+package seedu.zerotoone;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -7,29 +7,29 @@ import java.util.logging.Logger;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import seedu.address.commons.core.Config;
-import seedu.address.commons.core.LogsCenter;
-import seedu.address.commons.core.Version;
-import seedu.address.commons.exceptions.DataConversionException;
-import seedu.address.commons.util.ConfigUtil;
-import seedu.address.commons.util.StringUtil;
-import seedu.address.logic.Logic;
-import seedu.address.logic.LogicManager;
-import seedu.address.model.AddressBook;
-import seedu.address.model.Model;
-import seedu.address.model.ModelManager;
-import seedu.address.model.ReadOnlyAddressBook;
-import seedu.address.model.ReadOnlyUserPrefs;
-import seedu.address.model.UserPrefs;
-import seedu.address.model.util.SampleDataUtil;
-import seedu.address.storage.AddressBookStorage;
-import seedu.address.storage.JsonAddressBookStorage;
-import seedu.address.storage.JsonUserPrefsStorage;
-import seedu.address.storage.Storage;
-import seedu.address.storage.StorageManager;
-import seedu.address.storage.UserPrefsStorage;
-import seedu.address.ui.Ui;
-import seedu.address.ui.UiManager;
+import seedu.zerotoone.commons.core.Config;
+import seedu.zerotoone.commons.core.LogsCenter;
+import seedu.zerotoone.commons.core.Version;
+import seedu.zerotoone.commons.exceptions.DataConversionException;
+import seedu.zerotoone.commons.util.ConfigUtil;
+import seedu.zerotoone.commons.util.StringUtil;
+import seedu.zerotoone.logic.Logic;
+import seedu.zerotoone.logic.LogicManager;
+import seedu.zerotoone.model.AddressBook;
+import seedu.zerotoone.model.Model;
+import seedu.zerotoone.model.ModelManager;
+import seedu.zerotoone.model.ReadOnlyAddressBook;
+import seedu.zerotoone.model.ReadOnlyUserPrefs;
+import seedu.zerotoone.model.UserPrefs;
+import seedu.zerotoone.model.util.SampleDataUtil;
+import seedu.zerotoone.storage.AddressBookStorage;
+import seedu.zerotoone.storage.JsonAddressBookStorage;
+import seedu.zerotoone.storage.JsonUserPrefsStorage;
+import seedu.zerotoone.storage.Storage;
+import seedu.zerotoone.storage.StorageManager;
+import seedu.zerotoone.storage.UserPrefsStorage;
+import seedu.zerotoone.ui.Ui;
+import seedu.zerotoone.ui.UiManager;
 
 /**
  * Runs the application.

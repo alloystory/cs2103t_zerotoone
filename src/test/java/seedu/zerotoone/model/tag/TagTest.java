@@ -1,6 +1,6 @@
-package seedu.address.model.tag;
+package seedu.zerotoone.model.tag;
 
-import static seedu.address.testutil.Assert.assertThrows;
+import static seedu.zerotoone.testutil.Assert.assertThrows;
 
 import org.junit.jupiter.api.Test;
 

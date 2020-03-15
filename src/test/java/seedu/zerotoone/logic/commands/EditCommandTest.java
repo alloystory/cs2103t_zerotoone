@@ -1,31 +1,31 @@
-package seedu.address.logic.commands;
+package seedu.zerotoone.logic.commands;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static seedu.address.logic.commands.CommandTestUtil.DESC_AMY;
-import static seedu.address.logic.commands.CommandTestUtil.DESC_BOB;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_NAME_BOB;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_PHONE_BOB;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
-import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
-import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
-import static seedu.address.logic.commands.CommandTestUtil.showPersonAtIndex;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
-import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.DESC_AMY;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.DESC_BOB;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.VALID_NAME_BOB;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.VALID_PHONE_BOB;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.assertCommandFailure;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.assertCommandSuccess;
+import static seedu.zerotoone.logic.commands.CommandTestUtil.showPersonAtIndex;
+import static seedu.zerotoone.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
+import static seedu.zerotoone.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
+import static seedu.zerotoone.testutil.TypicalPersons.getTypicalAddressBook;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.address.commons.core.Messages;
-import seedu.address.commons.core.index.Index;
-import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;
-import seedu.address.model.AddressBook;
-import seedu.address.model.Model;
-import seedu.address.model.ModelManager;
-import seedu.address.model.UserPrefs;
-import seedu.address.model.person.Person;
-import seedu.address.testutil.EditPersonDescriptorBuilder;
-import seedu.address.testutil.PersonBuilder;
+import seedu.zerotoone.commons.core.Messages;
+import seedu.zerotoone.commons.core.index.Index;
+import seedu.zerotoone.logic.commands.EditCommand.EditPersonDescriptor;
+import seedu.zerotoone.model.AddressBook;
+import seedu.zerotoone.model.Model;
+import seedu.zerotoone.model.ModelManager;
+import seedu.zerotoone.model.UserPrefs;
+import seedu.zerotoone.model.person.Person;
+import seedu.zerotoone.testutil.EditPersonDescriptorBuilder;
+import seedu.zerotoone.testutil.PersonBuilder;
 
 /**
  * Contains integration tests (interaction with the Model, UndoCommand and RedoCommand) and unit tests for EditCommand.

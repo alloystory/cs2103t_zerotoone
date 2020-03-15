@@ -1,9 +1,9 @@
-package seedu.address.logic.commands;
+package seedu.zerotoone.logic.commands;
 
 import static java.util.Objects.requireNonNull;
-import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
+import static seedu.zerotoone.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
-import seedu.address.model.Model;
+import seedu.zerotoone.model.Model;
 
 /**
  * Lists all persons in the address book to the user.
