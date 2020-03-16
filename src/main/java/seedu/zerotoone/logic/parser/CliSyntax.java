@@ -14,6 +14,7 @@ public class CliSyntax {
     
     // ZeroToOne
     public static final Prefix PREFIX_EXERCISE_NAME = new Prefix("e/");
+    public static final Prefix PREFIX_NEW_EXERCISE_NAME = new Prefix("f/");
     public static final Prefix PREFIX_WORKOUT_NAME = new Prefix("w/");
     public static final Prefix PREFIX_NUM_OF_REPS = new Prefix("r/");
     public static final Prefix PREFIX_NUM_OF_SETS = new Prefix("s/");
