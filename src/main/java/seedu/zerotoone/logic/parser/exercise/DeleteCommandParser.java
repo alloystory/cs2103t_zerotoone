@@ -2,6 +2,8 @@ package seedu.zerotoone.logic.parser.exercise;
 
 import static seedu.zerotoone.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
+import seedu.zerotoone.logic.parser.Parser;
+
 import seedu.zerotoone.commons.core.index.Index;
 import seedu.zerotoone.logic.commands.DeleteCommand;
 import seedu.zerotoone.logic.parser.exceptions.ParseException;

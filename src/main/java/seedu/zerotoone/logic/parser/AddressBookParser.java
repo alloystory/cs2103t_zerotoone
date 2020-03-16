@@ -15,7 +15,15 @@ import seedu.zerotoone.logic.commands.ExitCommand;
 import seedu.zerotoone.logic.commands.FindCommand;
 import seedu.zerotoone.logic.commands.HelpCommand;
 import seedu.zerotoone.logic.commands.ListCommand;
+
+// import seedu.zerotoone.logic.commands.ExerciseCommand;
+
 import seedu.zerotoone.logic.parser.exceptions.ParseException;
+import seedu.zerotoone.logic.parser.exercise.ExerciseParser;
+
+abstract class ExerciseCommand extends Command {
+    public static final String COMMAND_WORD = "exercise";
+}
 
 /**
  * Parses user input.
@@ -67,6 +75,9 @@ public class AddressBookParser {
 
         case HelpCommand.COMMAND_WORD:
             return new HelpCommand();
+
+        case ExerciseCommand.COMMAND_WORD:
+            return new ExerciseParser().parseCommand(arguments);
 
         default:
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);

@@ -10,6 +10,11 @@ import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_TAG;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import seedu.zerotoone.logic.parser.ArgumentMultimap;
+import seedu.zerotoone.logic.parser.ArgumentTokenizer;
+import seedu.zerotoone.logic.parser.Parser;
+import seedu.zerotoone.logic.parser.Prefix;
+
 import seedu.zerotoone.logic.commands.AddCommand;
 import seedu.zerotoone.logic.parser.exceptions.ParseException;
 import seedu.zerotoone.model.person.Address;
@@ -22,7 +27,7 @@ import seedu.zerotoone.model.tag.Tag;
 /**
  * Parses input arguments and creates a new AddCommand object
  */
-public class AddCommandParser implements Parser<AddCommand> {
+public class CreateCommandParser implements Parser<AddCommand> {
 
     /**
      * Parses the given {@code String} of arguments in the context of the AddCommand
