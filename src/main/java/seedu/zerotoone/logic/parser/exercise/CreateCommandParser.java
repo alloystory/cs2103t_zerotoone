@@ -1,11 +1,7 @@
 package seedu.zerotoone.logic.parser.exercise;
 
 import static seedu.zerotoone.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_ADDRESS;
-import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_EMAIL;
-import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_PHONE;
-import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_TAG;
+import static seedu.zerotoone.logic.parser.CliSyntax.PREFIX_EXERCISE_NAME;
 
 import java.util.Set;
 import java.util.stream.Stream;
@@ -15,43 +11,40 @@ import seedu.zerotoone.logic.parser.ArgumentTokenizer;
 import seedu.zerotoone.logic.parser.Parser;
 import seedu.zerotoone.logic.parser.Prefix;
 
-import seedu.zerotoone.logic.commands.AddCommand;
+// import seedu.zerotoone.logic.commands.exercise.CreateCommand;
+import seedu.zerotoone.logic.parser.exercise.CreateCommand;
+
 import seedu.zerotoone.logic.parser.exceptions.ParseException;
-import seedu.zerotoone.model.person.Address;
-import seedu.zerotoone.model.person.Email;
-import seedu.zerotoone.model.person.Name;
-import seedu.zerotoone.model.person.Person;
-import seedu.zerotoone.model.person.Phone;
-import seedu.zerotoone.model.tag.Tag;
+// import seedu.zerotoone.model.exercise.Exercise;
+// import seedu.zerotoone.model.exercise.Set;
+
+class Exercise {}
 
 /**
- * Parses input arguments and creates a new AddCommand object
+ * Parses input arguments and creates a new CreateCommand object
  */
-public class CreateCommandParser implements Parser<AddCommand> {
+public class CreateCommandParser implements Parser<CreateCommand> {
 
     /**
-     * Parses the given {@code String} of arguments in the context of the AddCommand
-     * and returns an AddCommand object for execution.
+     * Parses the given {@code String} of arguments in the context of the CreateCommand
+     * and returns an CreateCommand object for execution.
      * @throws ParseException if the user input does not conform the expected format
      */
-    public AddCommand parse(String args) throws ParseException {
+    public CreateCommand parse(String args) throws ParseException {
         ArgumentMultimap argMultimap =
-                ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS, PREFIX_TAG);
+                ArgumentTokenizer.tokenize(args, PREFIX_EXERCISE_NAME);
 
-        if (!arePrefixesPresent(argMultimap, PREFIX_NAME, PREFIX_ADDRESS, PREFIX_PHONE, PREFIX_EMAIL)
+        if (!arePrefixesPresent(argMultimap, PREFIX_EXERCISE_NAME)
                 || !argMultimap.getPreamble().isEmpty()) {
-            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, CreateCommand.MESSAGE_USAGE));
         }
 
-        Name name = ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());
-        Phone phone = ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get());
-        Email email = ParserUtil.parseEmail(argMultimap.getValue(PREFIX_EMAIL).get());
-        Address address = ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get());
-        Set<Tag> tagList = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
+        // Name name = ParserUtil.parseName(argMultimap.getValue(PREFIX_EXERCISE_NAME).get());
 
-        Person person = new Person(name, phone, email, address, tagList);
+        Exercise exercise = new Exercise();
 
-        return new AddCommand(person);
+        return new CreateCommand();
+        // return new CreateCommand(exercise);
     }
 
     /**
