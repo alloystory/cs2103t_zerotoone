@@ -4,6 +4,8 @@ import static seedu.zerotoone.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORM
 
 import java.util.Arrays;
 
+import seedu.zerotoone.logic.parser.Parser;
+
 import seedu.zerotoone.logic.commands.FindCommand;
 import seedu.zerotoone.logic.parser.exceptions.ParseException;
 import seedu.zerotoone.model.person.NameContainsKeywordsPredicate;
