@@ -20,22 +20,24 @@ import seedu.zerotoone.model.Model;
 class CreateCommand extends Command {
     public static final String COMMAND_WORD = "create";
     public static final String MESSAGE_USAGE = "some message usage";
-
     public CommandResult execute(Model model) { return new CommandResult("CreateCommand"); }
 }
 
 class ListCommand extends Command {
     public static final String COMMAND_WORD = "list";
+    public static final String MESSAGE_USAGE = "some message usage";
     public CommandResult execute(Model model) { return new CommandResult("ListCommand"); }
 }
 
 class EditCommand extends Command {
     public static final String COMMAND_WORD = "edit";
+    public static final String MESSAGE_USAGE = "some message usage";
     public CommandResult execute(Model model) { return new CommandResult("EditCommand"); }
 }
 
 class DeleteCommand extends Command {
     public static final String COMMAND_WORD = "delete";
+    public static final String MESSAGE_USAGE = "some message usage";
     public CommandResult execute(Model model) { return new CommandResult("DeleteCommand"); }
 }
 
