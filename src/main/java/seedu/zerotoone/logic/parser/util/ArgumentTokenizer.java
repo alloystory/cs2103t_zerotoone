@@ -1,10 +1,12 @@
 package seedu.zerotoone.logic.parser.util;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import seedu.zerotoone.logic.parser.CliSyntax;
+import seedu.zerotoone.logic.parser.exceptions.ParseException;
 
 /**
  * Tokenizes arguments string of the form: {@code preamble <prefix>value <prefix>value ...}<br>
@@ -15,6 +17,9 @@ import java.util.stream.Stream;
  *    in the above example.<br>
  */
 public class ArgumentTokenizer {
+
+    public static final String MESSAGE_ARGS_ERROR = "Command either does not contain all the"
+            + " necessary prefixes, or contains invalid prefixes";
 
     /**
      * Returns true if none of the prefixes contains empty {@code Optional} values in the given
@@ -32,9 +37,32 @@ public class ArgumentTokenizer {
      * @param prefixes   Prefixes to tokenize the arguments string with
      * @return           ArgumentMultimap object that maps prefixes to their arguments
      */
-    public static ArgumentMultimap tokenize(String argsString, Prefix... prefixes) {
+    public static ArgumentMultimap tokenize(String argsString, Prefix... prefixes) throws ParseException {
+        if (!onlyPrefixesPresent(argsString, prefixes)) {
+            throw new ParseException(MESSAGE_ARGS_ERROR);
+        }
+
         List<PrefixPosition> positions = findAllPrefixPositions(argsString, prefixes);
         return extractArguments(argsString, positions);
+    }
+
+    /**
+     * Checks whether the {@code argsString} contains a set of prefixes. It ensures that
+     * only the accepted prefixes are present, they are present only once, and the others are not.
+     * @param argsString Arguments string of the form: {@code preamble <prefix>value <prefix>value ...}.
+     * @param prefixes Prefixes to tokenize the arguments string with.
+     * @return True if the accepted prefixes are present only once and all other prefixes are not present.
+     */
+    private static boolean onlyPrefixesPresent(String argsString, Prefix... prefixes) {
+        boolean prefixesPresentOnlyOnce = Stream.of(prefixes)
+                .allMatch(prefix -> argsString.contains(prefix.getPrefix())
+                        && argsString.split(prefix.getPrefix()).length == 2);
+
+        boolean otherPrefixesPresent = CliSyntax.getAllPrefixes().stream()
+                .filter(prefix -> !Arrays.asList(prefixes).contains(prefix))
+                .allMatch(prefix -> argsString.contains(prefix.getPrefix()));
+
+        return prefixesPresentOnlyOnce && !otherPrefixesPresent;
     }
 
     /**
@@ -46,24 +74,8 @@ public class ArgumentTokenizer {
      */
     private static List<PrefixPosition> findAllPrefixPositions(String argsString, Prefix... prefixes) {
         return Arrays.stream(prefixes)
-                .flatMap(prefix -> findPrefixPositions(argsString, prefix).stream())
+                .map(prefix -> findPrefixPosition(argsString, prefix))
                 .collect(Collectors.toList());
-    }
-
-    /**
-     * {@see findAllPrefixPositions}
-     */
-    private static List<PrefixPosition> findPrefixPositions(String argsString, Prefix prefix) {
-        List<PrefixPosition> positions = new ArrayList<>();
-
-        int prefixPosition = findPrefixPosition(argsString, prefix.getPrefix(), 0);
-        while (prefixPosition != -1) {
-            PrefixPosition extendedPrefix = new PrefixPosition(prefix, prefixPosition);
-            positions.add(extendedPrefix);
-            prefixPosition = findPrefixPosition(argsString, prefix.getPrefix(), prefixPosition);
-        }
-
-        return positions;
     }
 
     /**
@@ -78,10 +90,14 @@ public class ArgumentTokenizer {
      * {@code argsString} = "e/hi p/900", {@code prefix} = "p/" and
      * {@code fromIndex} = 0, this method returns 5.
      */
-    private static int findPrefixPosition(String argsString, String prefix, int fromIndex) {
-        int prefixIndex = argsString.indexOf(" " + prefix, fromIndex);
-        return prefixIndex == -1 ? -1
-                : prefixIndex + 1; // +1 as offset for whitespace
+    private static PrefixPosition findPrefixPosition(String argsString, Prefix prefix) {
+        int prefixIndex = argsString.indexOf(" " + prefix);
+        if (prefixIndex == -1) {
+            return null;
+        }
+
+        PrefixPosition prefixPosition = new PrefixPosition(prefix, prefixIndex + 1);
+        return prefixPosition;
     }
 
     /**
