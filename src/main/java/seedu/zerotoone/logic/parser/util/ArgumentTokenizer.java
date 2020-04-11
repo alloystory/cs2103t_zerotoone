@@ -55,14 +55,16 @@ public class ArgumentTokenizer {
      */
     private static boolean onlyPrefixesPresent(String argsString, Prefix... prefixes) {
         boolean prefixesPresentOnlyOnce = Stream.of(prefixes)
-                .allMatch(prefix -> argsString.contains(prefix.getPrefix())
-                        && argsString.split(prefix.getPrefix()).length == 2);
+                .allMatch(prefix -> argsString.contains(" " + prefix.getPrefix())
+                        && argsString.split(" " + prefix.getPrefix()).length == 2);
 
-        boolean otherPrefixesPresent = CliSyntax.getAllPrefixes().stream()
+        boolean otherValidPrefixesPresent = CliSyntax.getAllPrefixes().stream()
                 .filter(prefix -> !Arrays.asList(prefixes).contains(prefix))
-                .allMatch(prefix -> argsString.contains(prefix.getPrefix()));
+                .anyMatch(prefix -> argsString.contains(" " + prefix.getPrefix()));
 
-        return prefixesPresentOnlyOnce && !otherPrefixesPresent;
+        boolean otherPrefixesPresent = argsString.split("/").length != (prefixes.length + 1);
+
+        return prefixesPresentOnlyOnce && !otherValidPrefixesPresent && !otherPrefixesPresent;
     }
 
     /**
@@ -75,6 +77,7 @@ public class ArgumentTokenizer {
     private static List<PrefixPosition> findAllPrefixPositions(String argsString, Prefix... prefixes) {
         return Arrays.stream(prefixes)
                 .map(prefix -> findPrefixPosition(argsString, prefix))
+                .filter(prefix -> !prefix.equals(null))
                 .collect(Collectors.toList());
     }
 

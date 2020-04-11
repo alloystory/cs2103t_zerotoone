@@ -30,7 +30,13 @@ public class DisplayCommandParser implements Parser<DisplayCommand> {
         requireNonNull(args);
         Optional<LocalDateTime> startTimeOptional = Optional.empty();
         Optional<LocalDateTime> endTimeOptional = Optional.empty();
-        ArgumentMultimap argMultimap = ArgumentTokenizer.tokenize(args, PREFIX_LOG_START, PREFIX_LOG_END);
+        ArgumentMultimap argMultimap;
+
+        try {
+            argMultimap = ArgumentTokenizer.tokenize(args, PREFIX_LOG_START, PREFIX_LOG_END);
+        } catch (ParseException e) {
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
+        }
 
         if (argMultimap.getValue(PREFIX_LOG_START).isPresent()) {
             try {
