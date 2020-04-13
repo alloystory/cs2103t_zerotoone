@@ -231,11 +231,7 @@ image::user-guide/UgCreatedExercise.png[]
 
 The newly created exercise will be automatically added to the bottom of the exercise list. This exercise will not contain any sets at this point.
 
-
-```
-NOTE:
-<exercise_name> has to be a string, consisting of only alphanumeric characters
-```
+*NOTE:* `<exercise_name>` has to be a string, consisting of only alphanumeric characters
 
 ==== Adding a set to an exercise
 After you have created a new exercise in ZeroToOne, the next step is to add a set to the exercise! To add a set, simply enter this command:
@@ -254,13 +250,12 @@ image::user-guide/UgAddedExerciseSet.png[]
 
 The exercise set will be automatically appended to the current list of sets in the exercise. The user interface will be updated to show the edited exercise.
 
-```
-NOTE:
-* This command assumes that you have already created an exercise under EXERCISE_ID. If you have not created the exercise, refer to the section on “Creating a new exercise” first.
-* EXERCISE_ID refers to the index of the exercise in `exercise list`
-* <num_of_reps> should be a positive integer
-* <weight> should be a positive integer between 1 and 1000
-```
+*NOTE:*
+
+* This command assumes that you have already created an exercise under `EXERCISE_ID`. If you have not created the exercise, refer to the section on “Creating a new exercise” first.
+* `EXERCISE_ID` refers to the index of the exercise in `exercise list`
+* `<num_of_reps>` should be a positive integer
+* `<weight>` should be a positive integer between 1 and 1000
 
 ==== Editing a set in an exercise
 Changed your mind on the details of an exercise set? No worries, you can edit the information in an exercise set by simply entering this command:
@@ -280,13 +275,12 @@ The exercise set will be automatically updated in the exercise list. If so, the 
 Edited exercise set: Deadlift
 ```
 
-```
-NOTE:
-* EXERCISE_ID refers to the index of the exercise in `exercise list`
-* SET_ID refers to the index of the set in the exercise
-* <num_of_reps> has to be a positive integer
-* <weight> has to be a positive integer between 1 and 1000
-```
+*NOTE:*
+
+* `EXERCISE_ID` refers to the index of the exercise in `exercise list`
+* `SET_ID` refers to the index of the set in the exercise
+* `<num_of_reps>` has to be a positive integer
+* `<weight>` has to be a positive integer between 1 and 1000
 
 ==== Deleting a set in an exercise
 Want to delete an exercise set from the exercise? You can do so by simply entering this command:
@@ -306,11 +300,10 @@ The exercise set will be removed from the exercise, and the view will automatica
 Deleted Exercise Set: Deadlift
 ```
 
-```
-NOTE:
-* EXERCISE_ID refers to the index of the exercise in `exercise list`
-* SET_ID refers to the index of the set in the exercise
-```
+*NOTE:*
+
+* `EXERCISE_ID` refers to the index of the exercise in `exercise list`
+* `SET_ID` refers to the index of the set in the exercise
 
 ==== Listing all exercises
 
@@ -343,12 +336,11 @@ The Result Display will automatically update to only show exercises that match t
 .Find Exercise
 image::user-guide/UgFindExercise.png[]
 
-```
-NOTE:
-* <exercise_name> has to be a String, consisting of only Alphanumeric characters
-* <exercise_name> can be a partial substring of the full exercise name
-* <exercise_name> is not case-sensitive
-```
+*NOTE:*
+
+* `<exercise_name>` has to be a String, consisting of only Alphanumeric characters
+* `<exercise_name>` can be a partial substring of the full exercise name
+* `<exercise_name>` is not case-sensitive
 
 ==== Changing an exercise’s name
 
@@ -369,13 +361,12 @@ The exercise in ZeroToOne will be automatically updated to show its new name. If
 Edited exercise: Squat
 ```
 
-```
-NOTE:
-* EXERCISE_ID refers to the index of the exercise in `exercise list`
-* <exercise_name> has to be a String, consisting of only Alphanumeric characters
-```
+*NOTE:*
 
-==== Deleting an exercise (In Progress)
+* `EXERCISE_ID` refers to the index of the exercise in `exercise list`
+* `<exercise_name>` has to be a String, consisting of only Alphanumeric characters
+
+==== Deleting an exercise
 
 Want to remove an exercise from ZeroToOne? You can do so by entering this command into the command box:
 
@@ -394,10 +385,10 @@ The exercise will be removed from ZeroToOne. At the same time, all current worko
 Deleted Exercise: Deadlift
 ```
 
-```
-NOTE:
-* EXERCISE_ID refers to the index of the exercise in `exercise list`
-```
+*NOTE:*
+
+* `EXERCISE_ID` refers to the index of the exercise in `exercise list`
+
 // end::exercise[]
 
 // tag::workout[]
