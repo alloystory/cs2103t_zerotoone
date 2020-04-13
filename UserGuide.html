@@ -23,10 +23,10 @@
 <li><a href="#using-zerotoone">5. Using ZeroToOne</a>
 <ul class="sectlevel2">
 <li><a href="#overview">5.1. Overview</a></li>
-<li><a href="#getting-help">5.2. Getting Help</a></li>
-<li><a href="#closing-zerotoone-in-progress">5.3. Closing ZeroToOne (In Progress)</a></li>
+<li><a href="#viewing-app-information">5.2. Viewing App Information</a></li>
+<li><a href="#closing-zerotoone">5.3. Closing ZeroToOne</a></li>
 <li><a href="#starting-a-workout-session">5.4. Starting A Workout Session</a></li>
-<li><a href="#completing-an-exercise-set">5.5. Completing An Exercise Set</a></li>
+<li><a href="#completing-a-set">5.5. Completing a Set</a></li>
 <li><a href="#skipping-an-exercise-set">5.6. Skipping An Exercise Set</a></li>
 <li><a href="#stopping-a-workout-session">5.7. Stopping A Workout Session</a></li>
 <li><a href="#managing-your-exercises">5.8. Managing Your Exercises</a></li>
@@ -232,46 +232,48 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="getting-help"><a class="link" href="#getting-help">5.2. Getting Help</a></h3>
+<h3 id="viewing-app-information"><a class="link" href="#viewing-app-information">5.2. Viewing App Information</a></h3>
 <div class="paragraph">
 <p>Can’t remember the commands off the top of your head? Fret not. ZeroToOne provides you with a convenient way to view a list of all available commands that you can try. Simply enter the following command into the command box:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>help</code></pre>
+<pre class="CodeRay highlight"><code>about</code></pre>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/user-guide/UgHelp.png" alt="UgHelp">
 </div>
-<div class="title">Figure 3. Help Window</div>
+<div class="title">Figure 3. About Tab</div>
 </div>
 <div class="paragraph">
-<p>A pop-up window will appear, showing you a list of all available commands that you can try.</p>
+<p>The app view will switch tabs to show the About tab.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="closing-zerotoone-in-progress"><a class="link" href="#closing-zerotoone-in-progress">5.3. Closing ZeroToOne (In Progress)</a></h3>
+<h3 id="closing-zerotoone"><a class="link" href="#closing-zerotoone">5.3. Closing ZeroToOne</a></h3>
 <div class="paragraph">
 <p>After you have finished using the application, you can exit the application by simply entering the following command into the command box:</p>
 </div>
-<div class="paragraph">
-<p><code>exit</code></p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>exit</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>The application will close gracefully, and all data in the current usage completedExercise will be saved in the data directory. If the command is executed successfully, you should see the following message before the application closes:</p>
+<p>The application will close gracefully, and all data will be saved in the data directory. If the command is executed successfully, you should see the following message before the application closes:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>Thank you for using ZeroToOne! Your data has been saved successfully. Hope to see you soon for your next workout!</code></pre>
+<pre class="CodeRay highlight"><code>Thank you for using ZeroToOne! Your data has been saved successfully. Hope to see you again soon!</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="starting-a-workout-session"><a class="link" href="#starting-a-workout-session">5.4. Starting A Workout Session</a></h3>
 <div class="paragraph">
-<p>Are you ready to start working out now? To begin a new workout completedExercise, simply enter the following command into the command box:</p>
+<p>Are you ready to start working out now? To begin a new workout session, simply enter the following command into the command box:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -291,20 +293,20 @@ start 1</code></pre>
 <div class="title">Figure 4. Started Workout</div>
 </div>
 <div class="paragraph">
-<p>The User Interface will automatically switch to the “Home” tab. ZeroToOne will start displaying every exercise set in your workout, guiding you through set by set in your workout.</p>
+<p>The User Interface will automatically switch to the “Home” tab. ZeroToOne will display upcoming sets in your workout, guiding you through set by set in your workout.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>NOTE:
 * This command assumes that you have already created a workout in the application. If you have not, refer to the section on "Managing your workouts" to create a new workout.
-* WORKOUT_ID cannot be null and should be a value from the command `workout list`.</code></pre>
+* WORKOUT_ID cannot be null and should be a value of a workout from the workout tab.</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="completing-an-exercise-set"><a class="link" href="#completing-an-exercise-set">5.5. Completing An Exercise Set</a></h3>
+<h3 id="completing-a-set"><a class="link" href="#completing-a-set">5.5. Completing a Set</a></h3>
 <div class="paragraph">
-<p>Completed your exercise set? To mark the current exercise set as completed and move on to the next set, simply enter this command into the command box:</p>
+<p>Completed your exercise set? To mark the current exercise set as complete and move on to the next set, simply enter this command into the command box:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -318,13 +320,20 @@ start 1</code></pre>
 <div class="title">Figure 5. Done Set</div>
 </div>
 <div class="paragraph">
-<p>The background color of the completed set will turn green in a few seconds, indicating that the set is successfully completed. ZeroToOne will then progress your workout forward, by starting on the next set. If you are already on your last set, ZeroToOne will automatically stop the workout completedExercise after this command is executed.</p>
+<p>The background color of the completed set will turn green, indicating that the set is successfully completed. ZeroToOne will then progress your workout forward, indicating your next set.
+Additionally, the timer will reset to 00:00 and begin counting your rest for you.</p>
+</div>
+<div class="paragraph">
+<p>After however many seconds you wish to rest, you may continue on to your next set.</p>
+</div>
+<div class="paragraph">
+<p>If you were already on your last set, ZeroToOne will automatically stop the workout session after this command is executed and save your session to the <code>Log</code>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="skipping-an-exercise-set"><a class="link" href="#skipping-an-exercise-set">5.6. Skipping An Exercise Set</a></h3>
 <div class="paragraph">
-<p>Unable to complete your current exercise set? No worries, it happens to everyone. To skip the current exercise set, simply enter this command into the command box:</p>
+<p>Unable to complete your current exercise set? No worries, it happens to the best of us. To skip the current exercise set, simply enter this command into the command box:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -338,13 +347,16 @@ start 1</code></pre>
 <div class="title">Figure 6. Skipped Set</div>
 </div>
 <div class="paragraph">
-<p>The background color of the completed set will turn red for a few seconds, indicating that the set is incomplete. ZeroToOne will then progress your workout forward, by starting on the next set. If you are already on your last set, ZeroToOne will automatically stop the workout completedExercise after this command is executed.</p>
+<p>The background color of the completed set will turn red, indicating that the set is incomplete.</p>
+</div>
+<div class="paragraph">
+<p>This action is otherwise identical to the <code>done</code> command.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="stopping-a-workout-session"><a class="link" href="#stopping-a-workout-session">5.7. Stopping A Workout Session</a></h3>
 <div class="paragraph">
-<p>Need to stop the workout completedExercise prematurely? Simply enter this command into the command box:</p>
+<p>Need to stop the workout session prematurely? Simply enter this command into the command box:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -352,11 +364,11 @@ start 1</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>ZeroToOne will stop the workout that is currently in progress, and will stop tracking the progress of this workout. The user interface will automatically return to the main screen. Any incomplete sets will be logged by ZeroToOne. If stopping a workout completedExercise is successful, you should see the following in the feedback display:</p>
+<p>ZeroToOne will stop the workout that is currently in progress, and save the session into the <code>Log</code>. All remaining sets are marked as incomplete. The user interface will automatically return to the main screen. If stopping a workout session is successful, you should see the following in the feedback display with your workout name and time:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>Stopped completedExercise: Bench Press at 1 Apr 2020, 10:32:10 AM</code></pre>
+<pre class="CodeRay highlight"><code>Stopped workout session: Push Day at 13 Apr 2020, 3:36:17 PM</code></pre>
 </div>
 </div>
 </div>
@@ -378,7 +390,7 @@ start 1</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>Example use:
-exercise create e/Bench Press</code></pre>
+exercise create e/squat</code></pre>
 </div>
 </div>
 <div class="imageblock">
@@ -393,7 +405,7 @@ exercise create e/Bench Press</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>NOTE:
-&lt;exercise_name&gt; has to be a String, consisting of only Alphanumeric characters</code></pre>
+&lt;exercise_name&gt; has to be a string, consisting of only alphanumeric characters</code></pre>
 </div>
 </div>
 </div>
@@ -515,7 +527,7 @@ exercise set delete 1 2</code></pre>
 <div class="title">Figure 9. Exercise List</div>
 </div>
 <div class="paragraph">
-<p>The User Interface will automatically switch to the “Exercise” tab, and the result display will automatically update with the list of exercises (Figure 6).</p>
+<p>The User Interface will automatically switch to the “Exercise” tab, and the result display will automatically update with the list of exercises.</p>
 </div>
 </div>
 <div class="sect3">
@@ -765,7 +777,7 @@ workout exercise delete 1 3</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="finding-a-workout-by-name-in-progress"><a class="link" href="#finding-a-workout-by-name-in-progress">5.9.6. Finding a workout by name (In Progress)</a></h4>
+<h4 id="finding-a-workout-by-name"><a class="link" href="#finding-a-workout-by-name">5.9.6. Finding a workout by name</a></h4>
 <div class="paragraph">
 <p>You may find that you need to know a workout’s ID for some commands, or that you need to retrieve the details of a specific workout. Fret not! Simply type the following command:</p>
 </div>
@@ -777,14 +789,13 @@ workout exercise delete 1 3</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>Example use:
-workout find w/Strength Training</code></pre>
+workout find w/Push Day</code></pre>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/user-guide/UgFindWorkout.png" alt="UgFindWorkout">
 </div>
-<div class="title">Figure 13. Find Workout</div>
 </div>
 <div class="paragraph">
 <p>ZeroToOne will return a list of all the workouts whose name matches the workout name you have typed into the command. From this command, you can find out the workout ID number of the workout you are looking for, as well as see the details of each exercise in the workout.</p>
@@ -928,14 +939,14 @@ workout import p/data/myFriendsWorkout.txt</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>Example use:
-schedule create 1 d/2020-05-06 18:00</code></pre>
+schedule create 1 d/2020-10-06 18:00</code></pre>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/user-guide/schedule/UgScheduleSession.png" alt="UgScheduleSession">
+<img src="images/user-guide/UgScheduleSession.png" alt="UgScheduleSession">
 </div>
-<div class="title">Figure 14. Scheduling a workout session</div>
+<div class="title">Figure 13. Scheduling a workout session</div>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -959,7 +970,7 @@ schedule create 1 d/2020-05-06 18:00</code></pre>
 <div class="content">
 <img src="images/user-guide/schedule/UgListSchedule.png" alt="UgListSchedule">
 </div>
-<div class="title">Figure 15. Display of schedule in chronological order</div>
+<div class="title">Figure 14. Display of schedule in chronological order</div>
 </div>
 <div class="paragraph">
 <p>ZeroToOne displays an intuitive chronological view, showing your upcoming schedule! From this view, you can see what workout sessions are coming up, which workout sessions are outdated, as well as their corresponding schedule IDs.</p>
@@ -1081,7 +1092,7 @@ schedule recurring create WORKOUT_ID d/2020-05-26 10:00 f/MONTHLY</code></pre>
 <div class="content">
 <img src="images/user-guide/UgLogList.png" alt="UgLogList">
 </div>
-<div class="title">Figure 16. List of logged workout completedExercises</div>
+<div class="title">Figure 15. List of logged workout sessions</div>
 </div>
 <div class="paragraph">
 <p>ZeroToOne will display a list of all the logged workout completedExercises you have carried out. Here, you can see all the logged completedExercises as well as their corresponding log ID number.</p>
@@ -1179,7 +1190,7 @@ log display st/2020-01-01 00:00 et/2020-02-01 00:00</code></pre>
 <div class="content">
 <img src="images/user-guide/UgGraphicalLogs.png" alt="UgGraphicalLogs">
 </div>
-<div class="title">Figure 17. Graphical view of logs</div>
+<div class="title">Figure 16. Graphical view of logs</div>
 </div>
 <div class="paragraph">
 <p>ZeroToOne will display a graphical line chart that depicts your overall progress. This means you can quickly see at a glance how successful you have been in completing your completedExercises. This can help motivate you to work harder to improve, or continue maintaining your progress.</p>
@@ -1440,4 +1451,4 @@ users to interact with electronic devices through graphical means, not textual m
 A workout that has been completed and stored away safely.</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 07:15:14 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 09:53:42 UTC</div></div></div></body></html>
