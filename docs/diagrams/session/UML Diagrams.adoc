@@ -1,0 +1,69 @@
+= UML Diagrams
+:site-section: DeveloperGuide
+:toc:
+:toc-title:
+:toc-placement: preamble
+:sectnums:
+:imagesDir: ../../images/
+:stylesDir: stylesheets
+:xrefstyle: full
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:warning-caption: :warning:
+endif::[]
+:repoURL: https://github.com/AY1920S2-CS2103T-W16-2/main
+:codeURL: {repoURL}/tree/master/
+
+`CS2103T-W16-2` Aloysius Chan
+
+*Class Diagrams*
+
+.Main Class Diagram
+image::developer-guide/common/MainClassDiagram.png[width=400]
+
+The diagram above showcases the interactions between the Main classes. It is important in showing the loading sequence of the application.
+
+.Model Class Diagram
+image::developer-guide/common/ModelClassDiagram.png[width=600]
+
+The diagram above showcases the interactions between the various Model classes. It is important in showing an overview of how the Models interact with each other.
+
+.Storage Class Diagram
+image::developer-guide/common/StorageClassDiagram.png[width=600]
+
+The diagram above showcases the interactions between the various Storage classes. It is important in showing how an overview of how the Storage interact with each other.
+
+.Exercise Model Class Diagram
+image::developer-guide/exercise/ExerciseModelClassDiagram.png[]
+
+This diagram showcases the class diagram for the Exercise Models. It is important in showing the models available in the Exercise feature, and how the data interacts with each other.
+
+.Exercise Storage Class Diagram
+image::developer-guide/exercise/ExerciseStorageClassDiagram.png[width=400]
+
+This diagram showcases the class diagram for the Exercise Storage. It is important in showing how the storage works for the Exercise feature, so that developers can extend the persistent storage portion.
+
+.Exercise Command Class Diagram
+image::developer-guide/exercise/ExerciseCommandClassDiagram.png[width=700]
+
+This diagram showcases the class diagram for the Exercise Command. It is important in showing the hierarchical order of the Commands in the Exercise Commands, and how it links to the Command class.
+
+.Exercise Parser Class Diagram
+image::developer-guide/exercise/ExerciseParserClassDiagram.png[]
+
+This diagram showcases the class diagram for the Exercise Parser. It is important in showing how the parser relate to the ParserManager.
+
+*Sequence Diagram*
+
+.Exercise Create Command Sequence Diagram
+image::developer-guide/exercise/CreateCommandSequenceDiagram.png[]
+
+This diagram showcases the sequence diagram for the exercises' create command. It is important in showing an overview on how the different parts of the application and the exercise feature fits together.
+
+*Activity Diagram*
+
+.Exercise Edit Set Activity Diagram
+image::developer-guide/exercise/EditSetActivityDiagram.png[width=150]
+
+This diagram showcases the activity diagram for the `exercise edit set` command. It is important in showing the user-facing flow for the Exercise feature, and therefore, allow developers to have a broader view of how the feature fits with the application.
