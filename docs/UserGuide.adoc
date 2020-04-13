@@ -747,7 +747,7 @@ log list
 .List of logged workout sessions
 image::user-guide/UgLogList.png[]
 
-ZeroToOne will display a list of all the logged workout completedExercises you have carried out. Here, you can see all the logged completedExercises as well as their corresponding log ID number.
+ZeroToOne will display a list of all the logged workout sessions you have carried out. Here, you can see all the logged sessions as well as their corresponding log ID number.
 
 ==== Filtering your logs
 
@@ -823,7 +823,7 @@ NOTE:
 .Graphical view of logs
 image::user-guide/UgGraphicalLogs.png[]
 
-ZeroToOne will display a graphical line chart that depicts your overall progress. This means you can quickly see at a glance how successful you have been in completing your completedExercises. This can help motivate you to work harder to improve, or continue maintaining your progress.
+ZeroToOne will display a graphical line chart that depicts your overall progress. This means you can quickly see at a glance how successful you have been in completing your sessions. This can help motivate you to work harder to improve, or continue maintaining your progress.
 
 Here is a list and explanation of the metrics provided:
 
@@ -964,7 +964,7 @@ A workout that has been planned to be carried out on a specific date or dates.
 
 *Session*
 
-An instance of a workout, whereby the workout is a template for a completedExercise.
+An instance of a workout, whereby the workout is a template for a session.
 
 *Set*
 
